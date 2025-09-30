@@ -1,0 +1,319 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: rgb(188, 184, 184);
+}
+
+.navbar {
+  background-color: #333;
+  padding: 5px;
+  color: white;
+  display: flex; 
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.titulo  {
+  margin: 0;
+  font-size: 24px;
+  padding: 10px 15px;
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+.nav-links {
+  list-style-type: none; 
+  margin: 0;
+  padding: 0;
+  display: flex; 
+  align-items: center;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+}
+
+.nav-links a.activo {
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: underline;
+ }
+ 
+.perfil-link-nav .perfil {
+  margin-right: 20px;
+}
+
+.perfil {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  align-self: center;
+}
+
+/* --- NUEVOS ESTILOS DE LAYOUT --- */
+.page-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 0 20px;
+  margin-top: 80px;
+}
+
+.center-column {
+  max-width: 800px;
+  width: 100%;
+}
+
+/* --- ESTILOS DE PERFIL --- */
+.main-perfil {
+  margin-top: 20px;
+}
+
+.container {
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.perfil-header {
+  background-color: #f0f2f5; 
+  height: 200px;
+  border-bottom: 1px solid #ddd;
+  position: relative; 
+  border-radius: 8px 8px 0 0;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 30px 20px;
+}
+
+.perfil-2 {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%; 
+  object-fit: cover; 
+  margin-right: 20px;
+  border: 4px solid white;
+  position: relative;
+  bottom: -30px; /* Sube la foto para que se solape */
+}
+
+.perfil-header > div {
+  margin-bottom: 15px;
+}
+
+.Usuario {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0;
+  color: #333;
+}
+
+.perfil-bio {
+  font-size: 16px;
+  color: #65676b;
+  margin: 5px 0 15px 0; 
+}
+
+.editar-btn {
+  background-color: #e4e6eb;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-weight: 600;
+  cursor: pointer;
+  align-self: flex-start; 
+}
+
+.perfil-info {
+  padding: 25px;
+  padding-top: 45px; /* Más espacio por la foto superpuesta */
+}
+
+/* --- ESTILOS DE PUBLICACIONES --- */
+.main-publicaciones{
+  margin-top: 10px;
+}
+
+.publicaciones {
+  width: 100%;
+}
+
+.publicaciones h2{
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;  
+}
+
+.publicacion {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  margin-bottom: 24px;
+  padding: 16px;
+}
+
+.publicacion-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.publicacion-header .perfil {
+  width: 40px;
+  height: 40px;
+}
+
+.usuario {
+  font-weight: bold;
+  color: #333;
+  font-size: 1.1em;
+}
+
+.fecha {
+  margin-left: auto;
+  color: #888;
+  font-size: 0.9em;
+}
+
+.publicacion-contenido {
+  margin-bottom: 12px;
+}
+
+.foto-publicacion {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-top: 8px;
+}
+
+.publicacion-footer {
+  display: flex;
+  gap: 10px;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 10px;
+}
+
+.publicacion-footer button {
+  background: #f0f0f0;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* --- ESTILOS DE COMENTARIOS --- */
+.comentarios-seccion {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.comentario {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.perfil-comentario {
+    width: 35px;
+    height: 35px;
+}
+
+.comentario-bubble {
+    background-color: #f0f2f5;
+    border-radius: 12px;
+    padding: 8px 12px;
+    font-size: 0.95em;
+}
+
+/* --- ESTILOS DE CHAT --- */
+.chat-area {
+    width: 300px;
+    flex-shrink: 0;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    height: fit-content;
+    position: sticky; /* Se queda fijo al hacer scroll */
+    top: 90px;
+}
+
+.chat-area h3 {
+    margin-top: 0;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 10px;
+}
+
+.lista-chat {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.perfil-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.icono-chat-flotante {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 60px;
+    height: 60px;
+    background-color: #333;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 1001;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1200px) {
+    .chat-area {
+        display: none;
+    }
+}
+
+/* --- ESTILOS PARA EL PIE DE PÁGINA --- */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px; /* Espacio entre el contenido y el pie de página */
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}

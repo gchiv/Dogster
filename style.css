@@ -1,0 +1,270 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgb(188, 184, 184);
+}
+
+.navbar {
+    background-color: #333;
+    padding: 5px;
+    color: white;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.titulo {
+    margin: 0;
+    font-size: 24px;
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+    display: block;
+    align-self: center;
+}
+
+.nav-links {
+    list-style-type: none; 
+    margin: 0;
+    padding: 0;
+    display: flex; 
+    align-items: center;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+.nav-links a.activo {
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.perfil-link-nav {
+    margin-right: 20px;
+}
+
+.perfil {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    align-self: center;
+}
+
+.main-container {
+    padding: 0 20px;
+    margin-top: 80px;
+}
+
+main {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.publicaciones {
+    width: 100%;
+}
+
+.publicaciones h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;  
+}
+
+.publicacion {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    margin-bottom: 24px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.publicacion-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.publicacion-header .perfil {
+    width: 40px;
+    height: 40px;
+}
+
+.publicacion-header a {
+    text-decoration: none;
+    color: inherit;
+    gap: 5px;
+}
+
+.usuario {
+    font-weight: bold;
+    color: #333;
+    font-size: 1.1em;
+}
+
+.fecha {
+    margin-left: auto;
+    color: #888;
+    font-size: 0.9em;
+}
+
+.publicacion-contenido {
+    margin-bottom: 12px;
+}
+
+.publicacion-contenido p {
+    margin: 0 0 10px 0;
+}
+
+.foto-publicacion {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.publicacion-footer {
+    display: flex;
+    gap: 10px;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 10px;
+}
+
+.publicacion-footer button {
+    background: #f0f0f0;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+.publicacion-footer button:hover {
+    background: #e0e0e0;
+}
+
+.perfil-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.comentarios-seccion {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.comentario {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.perfil-comentario {
+    width: 35px;
+    height: 35px;
+}
+
+.comentario-bubble {
+    background-color: #f0f2f5;
+    border-radius: 12px;
+    padding: 8px 12px;
+    font-size: 0.95em;
+}
+
+.comentario-bubble p {
+    margin: 4px 0 0 0;
+}
+
+.chat-area {
+    width: 300px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    position: fixed;
+    top: 80px;
+    right: 20px;
+}
+
+.chat-area h3 {
+    margin-top: 0;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 10px;
+}
+
+.lista-chat {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.icono-chat-flotante {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 60px;
+    height: 60px;
+    background-color: #333;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 1001;
+}
+
+@media (max-width: 1200px) {
+    .chat-area {
+        display: none;
+    }
+
+    .main-container {
+        justify-content: center;
+    }
+
+    main {
+        max-width: 600px;
+    }
+}
+
+/* --- ESTILOS PARA EL PIE DE PÁGINA --- */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px; /* Espacio entre la última publicación y el pie de página */
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
